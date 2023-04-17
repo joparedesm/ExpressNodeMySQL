@@ -10,6 +10,6 @@ router.post('/', createEmployee);
 
 router.put('/', updateEmployee);
 
-router.delete('/', deleteEmployee);
+router.delete('/:id', deleteEmployee);
 
 export default router;
