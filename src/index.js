@@ -1,6 +1,6 @@
 import express from 'express';
-import routes from './routes/employees.routes.js';
-import { pool } from './db.js';
+import routesEmployees from './routes/employees.routes.js';
+import routesIndex from './routes/index.routes.js';
 
 const app = express();
 
@@ -11,12 +11,9 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.json());
 
 // routes
-app.get('/ping', async (req, res) => {
-    const [solution] = await pool.query('SELECT 1 + 1 AS solution');
-    res.json(solution[0]);
-});
+app.use( routesIndex );
 
-app.use( '/employees', routes );
+app.use( '/employees', routesEmployees );
 
 
 // starting the server
