@@ -13,7 +13,7 @@ app.use(express.json());
 // routes
 app.use( routesIndex );
 
-app.use( '/employees', routesEmployees );
+app.use( '/api/employees', routesEmployees );
 
 
 // starting the server

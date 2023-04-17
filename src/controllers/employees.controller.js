@@ -9,8 +9,9 @@ function isNumber(value) {
     return typeof value === 'number' && isFinite(value);
 }
 
-export const getEmployees = (req, res) => {
-    res.send('Get employees! \n Dummy key: ' + config.testKey);
+export const getEmployees = async (req, res) => {
+    const [rows] = await pool.query('SELECT * FROM employees');
+    res.send(rows);
 }
 
 export const createEmployee = async (req, res) => {
