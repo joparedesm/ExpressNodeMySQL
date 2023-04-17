@@ -6,6 +6,7 @@ const app = express();
 
 // setting up the server
 app.set('port', process.env.PORT || 3000);
+app.set('json spaces', 2); // number of spaces for indentation
 
 // middleware
 app.use(express.json());
