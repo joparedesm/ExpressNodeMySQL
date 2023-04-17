@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS pymesDB;
+
+USE pymesDB;
+
+CREATE TABLE employees (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50) DEFAULT NULL,
+    email VARCHAR(100) DEFAULT NULL,
+    phone VARCHAR(100) DEFAULT NULL,
+    salary INT(9) DEFAULT NULL,
+    PRIMARY KEY (id)
+);
+
+DESCRIBE employees;
