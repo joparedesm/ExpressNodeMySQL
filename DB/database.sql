@@ -1,3 +1,4 @@
+-- Active: 1681708678130@@127.0.0.1@3307@pymesdb
 CREATE DATABASE IF NOT EXISTS pymesDB;
 
 USE pymesDB;
@@ -12,3 +13,9 @@ CREATE TABLE employees (
 );
 
 DESCRIBE employees;
+
+INSERT INTO employees (name, email, phone, salary) VALUES
+('John', 'jhon@email.dot', '123456789', 1000),
+('Mary', 'mary@email.dot', '987654321', 2000),
+('Peter', 'peter@email.dot', '123987456', 3000),
+('Susan', 'susan@email.dot', '413415351', 4000);
